@@ -1,5 +1,6 @@
 package dev.codeoverload.marchmadnessevents;
 
+import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.EventHandler;
@@ -27,7 +28,7 @@ public class MarchMadnessEvents extends JavaPlugin implements Listener {
     private void createCustomItem() {
         customItem = new ItemStack(Material.FERN);
         ItemMeta meta = customItem.getItemMeta();
-        meta.setDisplayName("Lucky Clover");
+        meta.setDisplayName(Color.GREEN + "Lucky Clover");
         meta.setUnbreakable(true);
         meta.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
