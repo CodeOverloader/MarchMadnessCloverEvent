@@ -38,7 +38,7 @@ public class MarchMadnessEvents extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
-        if (event.getBlock().getType() == Material.GRASS_BLOCK) {
+        if (event.getBlock().getType() == Material.SHORT_GRASS) {
             Random random = new Random();
             if (random.nextDouble() <= DROP_CHANCE) {
                 event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), customItem);
